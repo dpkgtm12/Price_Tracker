@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+  <style>
+    body {
+      background: #2d2c2c;
+    }
+
+    nav .fa {
+      display: none;
+    }
+
+    #top_bar {
+      /* #455de6 */
+      color: rgb(210, 197, 11);
+      background-color: white;
+      width: 100%;
+      z-index: 1;
+      top: -20px;
+      text-align: center;
+      position: fixed;
+      font-size: 128%;
+      font-family: "Cooper black", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    #before_input_text {
+      text-align: center;
+      color: whitesmoke;
+      margin-top: 20px;
+      font-size: larger;
+    }
+
+    input {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      width: 300px;
+      height: 10px;
+      padding: 20px;
+      border: 4px solid rgb(210, 197, 11);
+      margin: 0px 0 0 10px;
+      text-align: center;
+      border-radius: 15px;
+    }
+
+    button {
+      margin-left: 20px;
+      width: 150px;
+      height: 50px;
+    }
+
+    .ad:hover {
+      margin-bottom: 2px;
+      width: 148px;
+      height: 48px;
+      border: 2px solid rgb(210, 197, 11);
+    }
+
+    .hii {
+      text-align: center;
+      margin: 20px 290px;
+      font-size: 35px;
+      font-family: "Cooper black";
+      color: white;
+    }
+
+    .hi {
+      text-align: center;
+      margin: 20px 20px;
+      font-size: 35px;
+      font-family: "Cooper black";
+      color: white;
+    }
+
+    .topnav {
+      margin-top: 60px;
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: rgb(210, 197, 11);
+      color: white;
+    }
+
+    .topnav li {
+      float: right;
+    }
+
+    /* Slideshow */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: 10px auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    /* .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  } */
+
+    /* Caption text */
+    .text {
+      font-size: 55px;
+      padding: 8px 12px;
+      position: absolute;
+      font-family: 'cooper black';
+      bottom: 150px;
+      width: 100%;
+      text-align: left;
+      font-weight: 10%;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 3s;
+    }
+
+    .slideshow-container img {
+      opacity: 0.7;
+      width: 100%;
+
+      height: 400px;
+    }
+
+    /* Box */
+    .box_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .box {
+      padding: 20px;
+      margin: 20px;
+      width: 300px;
+      height: 120px;
+      box-shadow: 0px 2px 3px rgb(210, 197, 11);
+      border: solid 1px #ccc;
+      border-radius: 20px;
+      background-color: white;
+    }
+
+    .box:hover {
+      width: 303px;
+      height: 122px;
+      box-shadow: 0px 2px 3px rgb(210, 57, 11);
+      border: solid 1px black;
+      border-radius: 20px;
+      background-color: white;
+    }
+
+    form {
+
+      display: flex;
+      justify-content: center;
+    }
+
+    .box b {
+      text-align: center;
+      color: rgb(210, 197, 11);
+    }
+
+    footer {
+      padding: 10px 10px;
+      text-align: center;
+      background-color: rgb(124, 124, 124);
+      color: white;
+    }
+
+    footer h2 {
+      color: rgb(210, 197, 11);
+    }
+
+    footer {
+      max-width: 100%;
+      margin-bottom: 0;
+    }
+
+    .hii {
+      text-transform: uppercase;
+      background-image: linear-gradient(-225deg,
+          #fff800 0%,
+          #fff800 29%,
+          #ff1361 67%,
+          #fff800 100%);
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 100% auto;
+      color: #fff;
+      background-clip: text;
+      -text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 2s linear infinite;
+      display: inline-block;
+      font-size: 30px;
+    }
+
+    @keyframes textclip {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    /* Media Queries */
+    @media (max-width: 767px) {
+      #top_bar {
+
+        font-size: 80%;
+        text-align: center;
+      }
+
+      .hii {
+        font-size: 22px;
+        margin: 30px 10px 0px 10px;
+      }
+
+      .hi {
+        font-size: 25px;
+      }
+
+      .slideshow-container {
+        margin: 20px auto;
+      }
+
+      .slideshow-container img {
+        height: 250px;
+      }
+
+      .text {
+
+        font-size: 17px;
+        top: 40px;
+      }
+
+      /* ... existing styles ... */
+
+      /* Media Queries */
+      @media (max-width: 767px) {
+        #top_bar {
+          font-size: 80%;
+          width: 100%;
+          padding: 5px 0px;
+        }
+
+        .nav-links {
+          position: absolute;
+          background: red;
+          height: 28vh;
+          width: 100px;
+          top: 0;
+          left: -120px;
+          text-align: left;
+          z-index: 2;
+          transition: 1s;
+          border-radius: 10px;
+        }
+
+        nav .fa {
+          display: block;
+          color: white;
+          margin: 10px;
+          font-size: 22px;
+          cursor: pointer
+        }
+
+        input {
+          margin: 0 auto;
+        }
+
+        .hii {
+          font-size: 25px;
+        }
+
+        .hi {
+          font-size: 25px;
+        }
+
+        .slideshow-container {
+          margin: 20px auto;
+        }
+
+        .slideshow-container img {
+          height: 20vh;
+          max-width: 100%;
+        }
+
+        .box_wrapper {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .box {
+          width: 80%;
+          margin: 20px;
+        }
+
+        footer {
+          font-size: 12px;
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="top_bar"><br> Bargain <br> Buddy<br></div>
+  <div class="nav-links" id="navLinks">
+    <i class="fa fa-times" onclick="hideMenu()"></i>
+    <div class="topnav">
+      <a class="active">Home</a>
+      <a href="contact/">Contact</a>
+      <a href="about/">About</a>
+      <li>
+        <a href="register">Login/Register</a>
+        <!-- <a  href="register" >Sign up</a> -->
+      </li>
+    </div>
+    <i class="fa fa-bars" onclick="showMenu()"></i>
+  </div>
+
+  <div class="hii">Track Price and Buy More in Less!! </div>
+
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+
+    <div class="mySlides fade">
+      <img
+        src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Flagship_100_Blog_2880x1800_Apparel.jpg"
+        width="1000px" height="500px" alt="Image">
+      <div class="text">Save Time With <br>Money !!</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img
+        src="https://cdn.searchenginejournal.com/wp-content/uploads/2022/08/google-shopping-ads-6304dccb7a49e-sej.png"
+        width="1000px" height="500px" alt="Image">
+      <div class="text">Never miss <br>a deal</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="https://www.gannett-cdn.com/presto/2021/10/16/USAT/a33bf9ac-d8e6-4a7e-8ade-a2e52cf4c2c8-Holidays.png"
+        width="1000px" height="500px" alt="SLide Image">
+      <div class="text"> Hurrah!!! <br>Buy In Less </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="before_input_text">
+    Buy when price drops, track price drops with BargainBuddy Price Tracker!
+    <h2> Never Pay More, Not A Penny More!</h2>
+  </div>
+  <form action="register">
+    <input name="url" placeholder="Enter URL of product"></input>
+
+    <button class="ad">Add Product</button>
+  </form>
+
+  <div class="hi">Features</div>
+  <div class="box_wrapper">
+    <div class="box">
+      <b> Accurate AF</b><br>
+      Compare prices before you buy. Accurate price history of every product.
+    </div>
+    <div class="box">
+      <b> Create Alert</b><br>
+      Real-time price reduction notifications through SMS, email, and WhatsApp, FREE.
+    </div>
+    <div class="box">
+      <b> Free to Use</b><br>
+      Our KaroBargain Price Tracker is free of cost. No hidden charges.
+    </div>
+  </div>
+  <div class="box_wrapper">
+    <div class="box">
+      <b> Accurate AF</b><br>
+      Compare prices before you buy. Accurate price history of every product.
+    </div>
+    <div class="box">
+      <b> Accurate AF</b><br>
+      Compare prices before you buy. Accurate price history of every product.
+    </div>
+    <div class="box">
+      <b> Accurate AF</b><br>
+      Compare prices before you buy. Accurate price history of every product.
+    </div>
+  </div>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 4000); // Change image every 2 seconds
+    }
+    var navLinks = document.getElementById("navLinks");
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+    var navLinks = document.getElementById("navLinks");
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+    }
+    function gohome() {
+      window.scrollBy(0, -5000)
+    }
+
+  </script>
+  <footer>
+    <h2 text-align="center">Bargain<br>Buddy</h2>
+    It's our || Copyright © 2022 ourTracker.com All rights || reserved
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  
+  <link rel="stylesheet" type="text/css" href="about.css">
+</head>
+<style>
+    #top_bar{
+      /* #455de6 */
+      color:rgb(210, 197, 11);
+      background-color: white;
+      width: 1250px;
+      z-index: 1;
+      top: -20px;
+      text-align: center;
+      position:fixed;
+      font-size: 128%;
+      font-family:"Cooper black", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    .topnav {
+      margin-top: 60px;
+        background-color: #333;
+        overflow: hidden;
+      }
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      .topnav a.active {
+        background-color: rgb(210, 197, 11);
+        color: white;
+      }
+      .topnav li{
+        float:right;    
+      }
+      footer{  
+    padding: 10px 10px;
+    text-align:center;
+    background-color: rgb(124, 124, 124);
+    color:white;
+  }
+footer h2{
+  color:rgb(210, 197, 11);
+}
+footer{
+  max-width: 400px 0px 10px 0px;
+}
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #000;
+    padding: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+    color: #fff;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  section.content {
+    padding: 20px;
+  }
+  
+  footer {
+  
+    padding: 20px;
+    text-align: center;
+  } 
+  p{
+    background-color: whitesmoke;
+    height: auto;
+    width: 30vw;
+    display: flex;
+    border: 2px solid yellow;
+    color:  black;
+    margin: 10px;
+    padding:10px ;
+    border-radius: 10px;
+  }
+  .content1{
+    display: flex;
+  }
+  
+
+</style>
+<body>
+  <header>
+    
+        <div id="top_bar"><br> Bargain <br> Buddy<br></div>
+        
+        <div class="topnav">
+          {% if request.session.name %}
+          <a  href="/">Home</a>
+          {% else %}
+
+          <a  href="/">Home</a>
+          {% endif %}
+          <a  href="/contact">Contact</a>
+          <a class="active" >About</a>
+          <li>
+            {% if request.session.name %}
+          <a  href="/logout">logout</a>
+          {% else %}
+        <a  href="/register">Login/Register</a>
+        {% endif %}
+        <!-- <a  href="register" >Sign up</a> -->
+      </li>
+    </div>  
+        
+  </header>
+
+  <section class="content">
+    <h2>Welcome to our Price Tracker Website</h2>
+    <section class="content1">
+    <p>We understand the importance of finding the best deals and saving money while shopping. That's why we've created a powerful and user-friendly price tracking platform to help you make informed purchasing decisions. Whether you're a savvy shopper, an e-commerce enthusiast, or simply looking to save some cash, our website is designed to meet all your price tracking needs. </p>
+    <p> our mission is to simplify your shopping experience and help you save money. We strive to continually enhance our platform to meet your evolving needs and deliver an exceptional user experience. Whether you're a price-conscious shopper, a deal hunter, or a frequent online purchaser, we're here to be your trusted companion on your shopping journey.</p>
+<p> we think Bargain Buddy (price tracker website) helped you.Thank you for choosing price tracker . Start tracking prices today and unlock a world of savings!
+
+</p>  
+</section>
+</section>
+
+  <footer>
+    <h2 text-align="center" >Bargain<br>Buddy</h2>
+    It's our || Copyright © 2022 ourTracker.com All rights || reserved
+  </footer>
+</body>
+</html>
